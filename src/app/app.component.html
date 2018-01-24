@@ -44,7 +44,9 @@
       <!--<button class="btn btn-primary displayButton" (click)="displayButton = !displayButton">Display Details</button>-->
       <button class="btn btn-primary displayButton" (click)="onToggleDetails()">Display Details</button>
       <p *ngIf="displayButton">Secret Password = RazzyFresh</p>
-      <div *ngFor="let logItem of log">{{ logItem }}</div>
+      <div *ngFor="let logItem of log" [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+           [ngClass]="{'white-text' : logItem >= 5 }"
+           >{{ logItem }}</div>
     </div>
   </div>
 </div>
