@@ -1,9 +1,10 @@
 
-<h2><app-servers></app-servers></h2>
+
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
+      <h2><app-servers></app-servers></h2>
       <br />
       <div class="input-group">
         <div class="btn-group" role="group" aria-label="...">
@@ -20,3 +21,19 @@
     </div>
   </div>
 </div>
+
+<hr />
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="userName">
+      <p>{{ userName }}</p>
+      <button class="btn btn-primary" [disabled]="userName === ''"
+              (click)="userName = ''">Reset User</button>
+    </div> 
+  </div>
+</div>
+
+

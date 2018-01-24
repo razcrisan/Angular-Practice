@@ -11,6 +11,10 @@ export class AppComponent {
   title: 'app';
   clickedSuccess = true;
   clickedWarning = true;
+  userName = '';
+
+
+
   public showSuccessMessage() {
     if (this.clickedSuccess) {
       this.clickedSuccess = false;
