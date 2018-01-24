@@ -12,8 +12,22 @@ export class AppComponent {
   clickedSuccess = true;
   clickedWarning = true;
   userName = '';
+  displayButton = false;
+  log = [];
 
+  //public showSecretPassword() {
+  //  if (this.displayButton) {
+  //    this.displayButton = false;
+  //  }
+  //  else {
+  //    this.displayButton = true;
+  //  }
+  //}
 
+  onToggleDetails() {
+    this.displayButton = !this.displayButton;
+    this.log.push(this.log.length + 1);
+  }
 
   public showSuccessMessage() {
     if (this.clickedSuccess) {
